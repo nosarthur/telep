@@ -1,0 +1,15 @@
+syntax = "proto3";
+package messages;
+
+
+message Request {
+    repeated string cmds = 1;
+}
+
+message Reply{
+    string stdout = 1;
+}
+
+service Command{
+    rpc Run(Request) returns (Reply){};
+}
