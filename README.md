@@ -9,3 +9,8 @@ Run shell command(s) remotely.
   - `go get -u github.com/golang/protobuf/protoc-gen-go`
 - `go get -u google.golang.org/grpc`
 - `go get -u github.com/spf13/cobra/cobra`
+
+## TODO
+
+- authentication
+- wrap each command inside a `struct` for querying and control

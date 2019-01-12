@@ -15,11 +15,11 @@ type server struct{}
 
 const port = ":9527"
 
-func (s *server) Run(ctx context.Context, req *pb.Request) (*pb.Reply, error) {
+func (s *server) Run(ctx context.Context, req *pb.Request) (*pb.Response, error) {
 	fmt.Println("in Run")
 	input := strings.Join(req.Cmds, " ")
-	reply := &pb.Reply{Stdout: input}
-	return reply, nil
+	resp := &pb.Response{Stdout: input}
+	return resp, nil
 }
 
 func main() {

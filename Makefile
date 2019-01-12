@@ -11,4 +11,5 @@ tserver: server/main.go
 install:
 	go install
 clean:
-	rm tserver telep
+	go clean
+	rm -f tserver

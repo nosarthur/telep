@@ -6,10 +6,10 @@ message Request {
     repeated string cmds = 1;
 }
 
-message Reply{
+message Response{
     string stdout = 1;
 }
 
 service Command{
-    rpc Run(Request) returns (Reply){};
+    rpc Run(Request) returns (Response){};
 }
